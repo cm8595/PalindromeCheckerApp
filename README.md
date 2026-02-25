@@ -1,7 +1,6 @@
 # PalindroneCheckerApp
 basic palindrome checking app
-// running procedure
-// flow of project
-// objective
-// what are topics its will be covered
-//which usecase
+// Hardcoded input
+// reverses the string and check character by character
+// StringBuilder, reverse() method, equals() method
+//use case 2
