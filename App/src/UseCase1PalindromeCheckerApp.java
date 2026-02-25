@@ -15,7 +15,7 @@
  * Note: No palindrome logic is implemented yet.
  * The goal is to establish a clear startup flow.
  *
- * @author Developer
+ * @author Chaitanya Bhargav
  * @version 1.0
  */
 public class UseCase1PalindromeCheckerApp {
