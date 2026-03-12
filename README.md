@@ -1,49 +1,133 @@
-# PalindromeCheckerApp
+# UseCase6: Queue + Stack Based Palindrome Checker
 
-Basic palindrome checking application in Java.
+## Overview
 
-## Use Case 5 – Stack Based Palindrome Checker
+This project demonstrates how **Queue (FIFO)** and **Stack (LIFO)** data structures can be used together to check whether a given string is a **palindrome**.
 
-This version of the application checks whether a string is a palindrome using a **Stack data structure**.
+A **palindrome** is a word or phrase that reads the same **forward and backward**.
 
-### How it works
+Example:
 
-* Hardcoded input string
-* Pushes characters into a stack
-* Pops characters to reverse the string
-* Compares the reversed string with the original
-* Prints whether the string is a palindrome
+* racecar
+* madam
+* level
 
-### Concepts Used
+The program inserts characters of a string into both a **Queue** and a **Stack**, then compares their outputs to determine if the string is a palindrome.
 
-* Stack (LIFO principle)
-* Push operation
-* Pop operation
-* String comparison using `equals()`
-* Character access using `charAt()`
+---
 
-### Example
+## Key Concepts
 
-Input:
+### Queue (FIFO – First In First Out)
+
+A Queue processes elements in the order they are inserted.
+
+Example:
 
 ```
-racecar
+Input: r a c e c a r
+Output: r a c e c a r
 ```
 
-Output:
+Operations used:
+
+* **Enqueue** – Add element to queue
+* **Dequeue** – Remove element from queue
+
+---
+
+### Stack (LIFO – Last In First Out)
+
+A Stack processes elements in reverse order of insertion.
+
+Example:
+
+```
+Input: r a c e c a r
+Output: r a c e c a r (reversed order)
+```
+
+Operations used:
+
+* **Push** – Add element to stack
+* **Pop** – Remove element from stack
+
+---
+
+## Palindrome Logic
+
+1. Insert each character of the string into:
+
+    * Queue (Enqueue)
+    * Stack (Push)
+
+2. Remove characters using:
+
+    * Queue → Dequeue
+    * Stack → Pop
+
+3. Compare both characters.
+
+4. If all characters match → the string is a **palindrome**.
+
+---
+
+## Data Structures Used
+
+* Queue
+* Stack
+
+Java Classes used:
+
+* `Queue`
+* `LinkedList`
+* `Stack`
+
+---
+
+## Project Structure
+
+```
+UseCase6PalindromeCheckerApp.java
+README.md
+```
+
+---
+
+## Compilation
+
+Compile the program using:
+
+```
+javac UseCase6PalindromeCheckerApp.java
+```
+
+---
+
+## Run the Program
+
+Execute the program using:
+
+```
+java UseCase6PalindromeCheckerApp
+```
+
+---
+
+## Example Output
 
 ```
 racecar is a palindrome
 ```
 
-### Compile
+---
 
-```
-javac UseCase5PalindromeCheckerApp.java
-```
+## Author
 
-### Run
+Chaitanya Bhargav
 
-```
-java UseCase5PalindromeCheckerApp
-```
+---
+
+## Version
+
+1.0
