@@ -1,4 +1,4 @@
-# Palindrome Checker App - UC10: Case-Insensitive & Space-Ignored Palindrome
+# Palindrome Checker App - UC12: Strategy Pattern for Palindrome Algorithms
 
 ## Author
 Bhargav
@@ -10,21 +10,24 @@ Bhargav
 The objective of the PalindromeChecker App is to design and implement a console-based Java application that validates whether a given string is a palindrome under different conditions, while strengthening core programming fundamentals and data structure concepts.
 
 ## Goal
-Ignore spaces and case while checking a palindrome.
+Choose a palindrome checking algorithm dynamically at runtime using **Strategy Pattern**.
 
 ## Flow
-1. Normalize the input string:
-   - Remove all spaces.
-   - Convert all letters to lowercase.
-2. Apply standard palindrome checking logic on the normalized string.
+1. Define a `PalindromeStrategy` interface.
+2. Implement multiple strategies:
+   - `StackStrategy` – Uses a stack to check palindrome.
+   - `DequeStrategy` – Uses a deque to check palindrome.
+3. Create a `PalindromeCheckerContext` that accepts a strategy.
+4. Inject and use the chosen strategy at runtime.
 
 ## Key Concepts Used
-- **String Preprocessing** – Prepare the string for uniform comparison.
-- **Regular Expressions** – Used to remove spaces from the string.
-- **Data Structure** – String / Array (via character access).
+- **Interface** – Defines the strategy contract.
+- **Polymorphism** – Allows using different strategies interchangeably.
+- **Strategy Pattern** – Encapsulates algorithms and enables dynamic switching.
+- **Data Structure** – Varies per strategy (Stack / Deque).
 
 ## Compilation and Execution
 
 ### Compile
 ```bash
-javac UseCase10PalindromeCheckerApp.java
+javac UseCase12PalindromeCheckerApp.java
